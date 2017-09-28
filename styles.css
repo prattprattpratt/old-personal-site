@@ -13,5 +13,12 @@ body {
     }
 
 .navbar {
-    border: solid gray 1px;
+    border-bottom: solid gray 1px !important;
+    background: white;
+}
+
+#posts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

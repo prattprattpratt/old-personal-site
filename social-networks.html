@@ -1,58 +1,76 @@
 <html>
-    <head>
-        <link rel="stylesheet" href="/styles.css" />
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script src="/social-networks.js"></script>
-    </head>
-    <body>
-        <script>
-            window.fbAsyncInit = function () {
-                FB.init({
-                    appId: '121281658620711',
-                    cookie: true,
-                    xfbml: true,
-                    version: 'v2.2'
-                });
-                FB.AppEvents.logPageView();
-            };
-
-            (function (d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id)) { return; }
-                js = d.createElement(s); js.id = id;
-                js.src = "//connect.facebook.net/en_US/sdk.js";
-                fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));
-
-            FB.getLoginStatus(function (response) {
-                statusChangeCallback(response);
+<head>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/social-networks.js"></script>
+</head>
+<body>
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '121281658620711',
+                xfbml: true,
+                version: 'v2.10'
             });
+            FB.AppEvents.logPageView();
+        };
 
-            function checkLoginState() {
-                FB.getLoginStatus(function (response) {
-                    statusChangeCallback(response);
-                });
-            }
-        </script>
-        <div id="main-content">
-            <nav class="navbar">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="/">Chris Pratt</a>
-                </div>
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="/">Home</a></li>
-                    <li><a href="/social-networks.html">Social Networks</a></li>
-                    <li><a href="/languages.html">Languages</a></li>
-                    <li><a href="/requests.html">Requests</a></li>
-                </ul>
-            </nav>
-            <h1 id="title">This is social networks page.</h1>
-            <div id="request"></div>
-            <fb:login-button scope="public_profile,email"
-                             onlogin="checkLoginState();">
-            </fb:login-button>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) { return; }
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <div id="main-content">
+        <nav class="navbar">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Chris Pratt</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="/social-networks.html">Social Networks</a></li>
+                <li><a href="/languages.html">Languages</a></li>
+                <li><a href="/requests.html">Requests</a></li>
+            </ul>
+        </nav>
+        <h1 id="title">Social Network Posts.</h1>
+
+        <div id="posts">
+            <div class="fb-post" data-href="https://www.facebook.com/lingotek/posts/10155190616649118:0" data-width="500" data-show-text="true">
+                <blockquote cite="https://www.facebook.com/lingotek/posts/10155190616649118:0" class="fb-xfbml-parse-ignore">
+                    <p>JOIN US AT MIRUM OPUS CHICAGO 2017\nMIRUM OPUS CHICAGO 2017: ACHIEVING PURPOSE-LED CHANGE AND INNOVATION\nLingotek is...</p>
+                    Posted by <a href="https://www.facebook.com/lingotek/">Lingotek</a> on&nbsp;<a href="https://www.facebook.com/lingotek/posts/10155190616649118:0">Friday, September 22, 2017</a>
+                </blockquote>
+            </div>
+
+            <div class="fb-post" data-href="https://www.facebook.com/lingotek/posts/10155189894134118" data-width="500" data-show-text="true">
+                <blockquote cite="https://www.facebook.com/lingotek/posts/10155189894134118" class="fb-xfbml-parse-ignore">
+                    <p>
+                        Press Release:
+
+                        Lingotek and Connect Worldwide Announce Global Strategic Partnership
+
+                        Working together to deliver...
+                    </p>Posted by <a href="https://www.facebook.com/lingotek/">Lingotek</a> on&nbsp;<a href="https://www.facebook.com/lingotek/posts/10155189894134118">Friday, September 22, 2017</a>
+                </blockquote>
+            </div>
+
+            <div class="fb-post" data-href="https://www.facebook.com/lingotek/posts/10155188447014118:0" data-width="500" data-show-text="true">
+                <blockquote cite="https://www.facebook.com/lingotek/posts/10155188447014118:0" class="fb-xfbml-parse-ignore">
+                    <p>
+                        Blog Post:
+
+                        Why Invest in a Translation Management System?
+                        By: Calvin Scharffs (VP of Marketing) - Lingotek, Inc.
+                        ...
+                    </p>Posted by <a href="https://www.facebook.com/lingotek/">Lingotek</a> on&nbsp;<a href="https://www.facebook.com/lingotek/posts/10155188447014118:0">Thursday, September 21, 2017</a>
+                </blockquote>
+            </div>
         </div>
-    </body>
+    </div>
+</body>
 </html>
