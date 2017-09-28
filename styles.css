@@ -1,0 +1,17 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+#main-content {
+    width: 900px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+    #main-content #title {
+        text-align: center;
+    }
+
+.navbar {
+    border: solid gray 1px;
+}
