@@ -1,17 +1,79 @@
 body {
     display: flex;
     justify-content: center;
+    font-family: 'Raleway';
+    background-color: black !important;
 }
 
 #main-content {
-    width: 900px;
+    width: 1111px;
     background: rgba(0, 0, 0, 0.1);
+    padding: 30px;
 }
 
     #main-content #title {
         text-align: center;
+        clear: both;
     }
 
 .navbar {
-    border: solid gray 1px;
+    background: white;
+    border-radius: 0px !important;
+    margin: -30px;
 }
+
+    .navbar ul {
+        display: flex;
+        float: none;
+    }
+
+        .navbar ul li {
+            flex: 1;
+            text-align: center;
+        }
+
+#posts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.language {
+    width: 200px;
+    height: 107px;
+    margin: 10px 10px 32px 10px;
+    border: solid 2px black;
+    display: inline-block;
+    text-align: center;
+    transition: all 1s;
+    background: white;
+}
+
+.tile {
+  height: 400px;
+  width: 400px;
+  background-color: white;
+  display: inline-block;
+  margin: 20px;
+}
+
+    .tile#tile-student {
+      background-image: url("/images/student-small.png");
+      color: yellow;
+    }
+
+    .tile#tile-web-developer {
+      background-image: url("/images/web-developer-small.png");
+      color: white;
+    }
+
+    .tile#tile-mormon {
+      background-image: url("/images/mormon-small.png");
+      color: white;
+    }
+
+    .tile .tile-title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
