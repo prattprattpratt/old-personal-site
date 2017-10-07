@@ -2,6 +2,7 @@
     <head>
         <link rel="stylesheet" href="/styles.css" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
@@ -16,9 +17,35 @@
                     <li><a href="/social-networks.html">Social Networks</a></li>
                     <li><a href="/languages.html">Languages</a></li>
                     <li><a href="/requests.html">Requests</a></li>
+                    <li><a href="/projects.html">Projects</a></li>
                 </ul>
             </nav>
             <h1 id="title">This is the requests page.</h1>
+            <h3>For #1 - I started connection to the FB Graph API, which can be used to log/log out and all that cool stuff. I wanted to make it so that someone can log in and then it would display their top <em>n</em> posts but I decided it wasn't worth the time. Here is the request I was sending:</h3>
+                <blockquote>
+                    var request = new XMLHttpRequest;<br />
+                    request.open("GET", "https://graph.facebook.com/v2.2/me/friends?access_token=QZDZD", false);<br />
+                    request.send(null);<br />
+                    $("#request").html(request);<br />
+                </blockquote>
+            <h3>For #2 - I made an HTTP GET request to gmc.lingotek.com/language, parsed the JSON and styled the response information. Easy peasy.</h3>
+                <blockquote>
+                    var request = new XMLHttpRequest();<br />
+                    var url = "http://gmc.lingotek.com/language", array;<br /><br />
+
+                    request.onreadystatechange = function () {<br />
+                    if (this.readyState == 4 && this.status == 200) {<br />
+                    array = JSON.parse(this.responseText);<br />
+                    for (var language in array) {<br />
+                    $("#languages").html(<br />
+                    $("#languages").html() +<br />
+                      [display stuff here]<br />
+                    }<br />
+                    }<br />
+                    };<br />
+                    request.open("GET", url, true);
+                    request.send();
+                </blockquote>
         </div>
     </body>
 </html>
