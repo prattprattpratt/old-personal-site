@@ -1,36 +1,44 @@
 body {
     display: flex;
     justify-content: center;
-    font-family: 'Raleway';
-    background-color: black !important;
+    font-family: 'Raleway' !important;
 }
 
 #main-content {
     width: 1111px;
-    background: rgba(0, 0, 0, 0.1);
+    background: white;
     padding: 30px;
 }
 
     #main-content #title {
         text-align: center;
         clear: both;
+        padding: 15px 0;
+        margin: 30px -35px 18px -35px;
+        color: black;
+        font-size: 66px;
     }
 
 .navbar {
     background: white;
     border-radius: 0px !important;
-    margin: -30px;
+    margin: -30px !important;
 }
 
     .navbar ul {
         display: flex;
         float: none;
+        font-size: 20px;
     }
 
         .navbar ul li {
             flex: 1;
             text-align: center;
         }
+
+    .navbar .navbar-brand {
+      font-weight: bold;
+    }
 
 #posts {
     display: flex;
@@ -49,31 +57,36 @@ body {
     background: white;
 }
 
+#tiles {
+  margin: 18px -31px;
+}
+
 .tile {
-  height: 400px;
-  width: 400px;
-  background-color: white;
-  display: inline-block;
-  margin: 20px;
+  height: 556px;
+  width: 556px;
+  display: flex;
+  justify-content: center;
+  float: left;
 }
 
     .tile#tile-student {
       background-image: url("/images/student-small.png");
-      color: yellow;
     }
 
     .tile#tile-web-developer {
       background-image: url("/images/web-developer-small.png");
-      color: white;
     }
 
     .tile#tile-mormon {
       background-image: url("/images/mormon-small.png");
-      color: white;
     }
 
     .tile .tile-title {
       display: flex;
       justify-content: center;
       align-items: center;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      color: white;
+      font-size: 60px;
     }
