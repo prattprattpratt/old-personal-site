@@ -5,7 +5,7 @@ body {
 }
 
 #main-content {
-    width: 1111px;
+    width: 1113px;
     background: white;
     padding: 30px;
 }
@@ -40,53 +40,126 @@ body {
       font-weight: bold;
     }
 
-#posts {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.language {
-    width: 200px;
-    height: 107px;
-    margin: 10px 10px 32px 10px;
-    border: solid 2px black;
-    display: inline-block;
-    text-align: center;
-    transition: all 1s;
-    background: white;
-}
-
 #tiles {
   margin: 18px -31px;
+}
+
+.tile, .tile-main {
+  display: flex;
+  justify-content: center;
+}
+
+.tile > .tile-title, .tile-main > .tile-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
 }
 
 .tile {
   height: 556px;
   width: 556px;
-  display: flex;
-  justify-content: center;
   float: left;
+  cursor: pointer;
 }
 
     .tile#tile-student {
-      background-image: url("/images/student-small.png");
+      background-image: url("/images/small/student-small.png");
     }
 
     .tile#tile-web-developer {
-      background-image: url("/images/web-developer-small.png");
+      background-image: url("/images/small/web-developer-small.png");
     }
 
     .tile#tile-mormon {
-      background-image: url("/images/mormon-small.png");
+      background-image: url("/images/small/mormon-small.png");
     }
 
-    .tile .tile-title {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      background: rgba(0, 0, 0, 0.3);
-      color: white;
+    .tile#tile-data-analyst {
+      background-image: url("/images/small/data-analyst-small.png");
+    }
+
+    .tile#tile-husband {
+      background-image: url("/images/small/husband-small.png");
+    }
+
+    .tile > .tile-title {
       font-size: 60px;
+    }
+
+.tile-main {
+  width: 1113px;
+  height: 625px;
+}
+
+    .tile-main#tile-main-student {
+      background-image: url("/images/main/student-main.png");
+    }
+
+    .tile-main#tile-main-web-developer {
+      background-image: url("/images/main/web-developer-main.png");
+    }
+
+    .tile-main#tile-main-mormon {
+      background-image: url("/images/main/mormon-main.png");
+    }
+
+    .tile-main#tile-main-data-analyst {
+      background-image: url("/images/main/data-analyst-main.png");
+    }
+
+    .tile-main#tile-main-husband {
+      background-image: url("/images/main/husband-main.png");
+    }
+
+    .tile-main > .tile-title {
+      font-size: 80px;
+    }
+
+/* Web Developer Page */
+#projects-list, #technologies-list {
+  height: 200px;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+    #projects-list > li {
+      width: 350px;
+      height: 200px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    #projects-list > li#history {
+      background-image: url('/images/projects/history.png');
+    }
+
+    #projects-list > li#aff {
+      background-image: url('/images/projects/aff.png');
+    }
+
+    #projects-list > li#fhsscomputing {
+      background-image: url('/images/projects/fhsscomputing.png');
+    }
+
+    #technologies-list > li {
+      width: 200px;
+      height: 200px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    #technologies-list > li#jquery {
+      background-image: url('/images/technologies/jquery.png');
+    }
+
+    #technologies-list > li#react {
+      background-image: url('/images/technologies/react.png');
+    }
+
+    #technologies-list > li#csharp {
+      background-image: url('/images/technologies/csharp.png');
     }
