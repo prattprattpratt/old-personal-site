@@ -5,6 +5,18 @@
       <link href="https://fonts.googleapis.com/css?family=Raleway:100" rel="stylesheet">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script>
+        function getIthFib(i) {
+  var sequence = [1, 1];
+  var count = 2;
+  while (count <= i) {
+    sequence[count] = sequence[count-1] + sequence[count-2];
+    count ++;
+  }
+
+  console.log(sequence[i]);
+}
+      </script>
 	</head>
 	<body>
       <div id="main-content">
