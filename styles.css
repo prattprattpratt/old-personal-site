@@ -120,29 +120,41 @@ body {
 
 /* Web Developer Page */
 #projects-list, #technologies-list {
-  height: 200px;
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
 }
 
-    #projects-list > li {
+    #projects-list li {
       width: 350px;
       height: 200px;
       background-size: contain;
       background-repeat: no-repeat;
     }
 
-    #projects-list > li#history {
+    #projects-list li#history {
       background-image: url('/images/projects/history.png');
     }
 
-    #projects-list > li#aff {
+    #projects-list li#aff {
       background-image: url('/images/projects/aff.png');
     }
 
-    #projects-list > li#fhsscomputing {
+    #projects-list li#fhsscomputing {
       background-image: url('/images/projects/fhsscomputing.png');
+    }
+
+    #projects-list li#parenting {
+        background-image: url('/images/projects/parenting.png');
+    }
+
+    #projects-list li#vreadr {
+      background-image: url('/images/projects/vreadr.png');
+    }
+
+    #projects-list li#bold {
+        background-image: url('/images/projects/bold.png');
     }
 
     #technologies-list > li {

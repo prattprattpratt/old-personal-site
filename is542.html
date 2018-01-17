@@ -1,0 +1,155 @@
+<html>
+   <head>
+      <link rel="stylesheet" href="/styles.css" />
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Raleway:100" rel="stylesheet">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script src="/is542.js"></script>
+   </head>
+   <body>
+      <div id="main-content">
+         <nav class="navbar">
+            <div class="navbar-header">
+               <a class="navbar-brand" href="/">Chris Pratt</a>
+            </div>
+            <ul class="nav navbar-nav">
+               <li><a href="/web-developer.html">Web Developer</a></li>
+               <li><a href="/mormon.html">Mormon</a></li>
+               <li><a href="/data-analyst.html">Data Analyst</a></li>
+               <li><a href="/student.html">Student</a></li>
+               <li><a href="/husband.html">Husband</a></li>
+            </ul>
+         </nav>
+         <h1>IS 542 - Web Development</h1>
+         <h3>Assignment 1 - JS</h3>
+         <h4>Fibonacci</h4>
+         <code>
+            <pre>
+function getIthFib(i) {
+  var sequence = [1, 1];
+  var count = 2;
+  while (count <= i) {
+    sequence[count] = sequence[count-1] + sequence[count-2];
+    count ++;
+  }
+  console.log(sequence[i]);
+}
+            </pre>
+         </code>
+         <p>Try it out!</p>
+         <input id="fib-num" name="fib-num" type="number" min="1" value="1" />
+         <button type="submit" class="btn btn-primary" onclick="getIthFib($('#fib-num').val())">Submit</button>
+         <input id="fib-result" disabled />
+         <br>
+         <h4>n!</h4>
+         <code>
+            <pre>
+function nFactorial(i) {
+  var arr = [];
+  var count = 1;
+  var total = 1;
+  for (var j = i; j > 0; j--) {
+    arr[count] = j;
+    count++;
+  }
+  for (num in arr) {
+    total *= arr[num];
+  }
+  console.log(total);
+}
+            </pre>
+         </code>
+         <p>Try it out!</p>
+         <input id="nFactorial-num" name="nFactorial-num" type="number" min="1" value="1" />
+         <button type="submit" class="btn btn-primary" onclick="nFactorial($('#nFactorial-num').val())">Submit</button>
+         <input id="nFactorial-result" disabled />
+         <br>
+         <h4>Compute the sum of all integers between two given integers (inclusive)</h4>
+         <code>
+            <pre>
+function sumIntsBetween(i, j) {
+    var arr = [i, j].sort();
+    var total = 0;
+    for (var k = arr[0]; k <= arr[1]; k++) {
+        total += k;
+    }
+    console.log(total);
+}
+            </pre>
+         </code>
+         <p>Try it out!</p>
+         <input id="sumInts-num1" name="sumInts-num" type="number" min="1" value="1" />
+         <input id="sumInts-num2" name="sumInts-num2" type="number" min="1" value="5" />
+         <button type="submit" class="btn btn-primary" onclick="sumIntsBetween($('#sumInts-num1').val(), $('#sumInts-num2').val())">Submit</button>
+         <input id="sumInts-result" disabled />
+         <br>
+         <h4>Given a number of cents, print to the browser console the corresponding U.S. coins that total to the given number.</h4>
+         <code>
+            <pre>
+function calcCoins(a) {
+    var i = a;
+    var coins = [0, 0, 0, 0];
+    while (i > 0) {
+        while (i >= 25) {
+            i -= 25;
+            coins[0]++;
+        }
+        while (i >= 10) {
+            i -= 10;
+            coins[1]++;
+        }
+        while (i >= 5) {
+            i -= 5;
+            coins[2]++;
+        }
+        while (i >= 1) {
+            i -= 1;
+            coins[3]++;
+        }
+    }
+    
+    var output = "";
+    if (coins[0] > 1) {
+        output += coins[0] + " quarters";
+    } else if (coins[0] === 1) {
+        output += "1 quarter";
+    }
+    if (a%25 != 0 && coins[0] != 0) {
+        output += ", ";
+    }
+    
+    if(coins[1] > 1) {
+        output += coins[1] + " dimes";
+    } else if (coins[1] === 1) {
+        output += "1 dime";
+    }
+    if (coins[1] != 0 && (coins[2] > 0 || coins[3] > 0)) {
+        output += ", ";
+    }
+    
+    if(coins[2] > 1) {
+        output += coins[2] + " nickels";
+    } else if (coins[2] === 1) {
+        output += "1 nickel";
+    }
+    if (coins[2] != 0 && coins[3] > 0) {
+        output += ", ";
+    }
+    
+    if(coins[3] > 1) {
+        output += coins[3] + " pennies";
+    } else if (coins[3] === 1) {
+        output += "1 penny";
+    }
+    console.log(output);
+}
+            </pre>
+         </code>
+         <p>Try it out!</p>
+         <input id="calcCoins-num" name="calcCoins-num" type="number" min="0" value="100" />
+         <button type="submit" class="btn btn-primary" onclick="calcCoins($('#calcCoins-num').val())">Submit</button>
+         <input id="calcCoins-result" disabled style="min-width: 280px;" />
+      </div>
+   </body>
+</html>
